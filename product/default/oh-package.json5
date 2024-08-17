@@ -1,0 +1,13 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@ohos/common" : "file:../../common",
+    "@ohos/feature1" : "file:../../features/feature1",
+    "@ohos/feature2": "file:../../features/feature2"
+  }
+}

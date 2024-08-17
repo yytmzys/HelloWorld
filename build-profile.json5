@@ -20,8 +20,32 @@
   },
   "modules": [
     {
-      "name": "entry",
-      "srcPath": "./entry",
+      "name": "default",
+      "srcPath": "./product/default",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "common",
+      "srcPath": "./common"
+    },
+    {
+      "name": "feature1",
+      "srcPath": "./features/feature1"
+    },
+    {
+      "name": "feature2",
+      "srcPath": "./features/feature2"
+    },
+    {
+      "name": "wearable",
+      "srcPath": "./product/wearable",
       "targets": [
         {
           "name": "default",

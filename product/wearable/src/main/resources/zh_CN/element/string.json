@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "WearableAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "WearableAbility_label",
+      "value": "label"
+    }
+  ]
+}
