@@ -4,6 +4,10 @@
     "pages/HelloWorld/HelloWorldPage",
     "pages/HelloWorld/SecondPage",
     "pages/Module/ModulePage",
-    "pages/weather/WeatherPage"
+    "pages/weather/WeatherPage",
+    "pages/stateManage/StateManagePage",
+    "pages/stateManage/ObservedObjectLinkPage",
+    "pages/rendering/RenderingPage",
+    "pages/netWork/NetWorkPage"
   ]
 }

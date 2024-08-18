@@ -42,6 +42,27 @@ struct Index {
         ListItem() {
           Text('3 + 5 = ' + Add(3, 5).toString())
         }
+
+        ListItem() {
+          Text('组件状态管理')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/stateManage/StateManagePage'})
+            })
+        }
+
+        ListItem() {
+          Text('渲染控制')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/rendering/RenderingPage'})
+            })
+        }
+
+        ListItem() {
+          Text('网络请求')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/netWork/NetWorkPage'})
+            })
+        }
       }
       .width('100%')
       .height('100%')
