@@ -8,6 +8,9 @@
     "pages/stateManage/StateManagePage",
     "pages/stateManage/ObservedObjectLinkPage",
     "pages/rendering/RenderingPage",
-    "pages/netWork/NetWorkPage"
+    "pages/netWork/NetWorkPage",
+    "pages/LottiePage",
+    "pages/WebPage",
+    "pages/DataPersistencePage"
   ]
 }
