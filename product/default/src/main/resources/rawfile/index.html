@@ -1,0 +1,95 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<button type="button" onclick="callArkTS()" style="font-size: 50px;">2.3 点击!</button>
+<button type="button" onclick="callArkTS2()" style="font-size: 50px;">3.3 web调原生!</button>
+<button type="button" onclick="callArkTS3()" style="font-size: 50px;">4.3 传递Array</button>
+<button type="button" onclick="callArkTS4()" style="font-size: 50px;">5.3 数据类型</button>
+<button type="button" onclick="callArkTS5()" style="font-size: 50px;">6.3 CallBack</button>
+<button type="button" onclick="callArkTS6()" style="font-size: 50px;">7.3 CallBack</button>
+<button type="button" onclick="callArkTS7()" style="font-size: 50px;">8.3 CallBack</button>
+<button type="button" onclick="callArkTS8()" style="font-size: 50px;">9.3 Promise1</button>
+<button type="button" onclick="callArkTS9()" style="font-size: 50px;">10.3 Promise2</button>
+<p id="demo"></p>
+<h1 id="text">这是一个测试信息，默认字体为黑色，调用runJavaScript方法后字体为绿色，调用runJavaScriptCodePassed方法后点击Click Me字体为红色</h1>
+<script>
+    // 调用有参函数时实现。
+    var param = "param: JavaScript Hello World!";
+    function htmlTest(param) {
+        document.getElementById('text').style.color = 'green';
+        console.log(param);
+    }
+
+    // 调用无参函数时实现。
+    function htmlTest() {
+        document.getElementById('text').style.color = 'green';
+    }
+
+    // Click Me！触发前端页面callArkTS()函数执行JavaScript传递的代码。
+    function callArkTS() {
+        changeColor();
+    }
+
+    function callArkTS2() {
+        let str = testObjName.test();
+        document.getElementById("demo").innerHTML = str;
+        console.info('ArkTS Hello World! :' + str);
+    }
+
+    function callArkTS3() {
+        testObjName.toString(testObjName.testArray());
+    }
+
+    function callArkTS4() {
+        testObjName.toString2(testObjName.testStudent());
+    }
+
+    function callArkTS5() {
+        testObjName.testCallback(function(param){testObjName.toString(param)});
+    }
+
+    // 7.3 写法1
+    class Student {
+        constructor(nameList) {
+            this.methodNameListForJsProxy = nameList;
+        }
+        hello(param) {
+            testObjName.toString(param)
+        }
+    }
+
+    var st = new Student(["hello"])
+    // 写法2
+    //创建一个构造器，构造函数首字母大写
+    function Obj1(){
+        this.methodNameListForJsProxy = ["hello"];
+        this.hello = function(param) {
+            testObjName.toString(param)
+        };
+    }
+
+    //利用构造器，通过new关键字生成对象
+    var st1 = new Obj1()
+    function callArkTS6() {
+        testObjName.testHello(st)
+        testObjName.testHello(st1)
+    }
+
+    function callArkTS7() {
+      testObjName.testESObject().testOther("call other object func");
+    }
+
+    function callArkTS8() {
+      testObjName.testPromise1().then((param)=>{testObjName.toString(param)}).catch((param)=>{testObjName.toString(param)})
+    }
+
+    function callArkTS9() {
+      let funpromise
+      var p = new Promise(function(resolve, reject){funpromise=(param)=>{resolve(param)}})
+      testObjName.testPromise2(funpromise)
+      p.then((param)=>{testObjName.toString(param)})
+    }
+</script>
+</body>
+</html>

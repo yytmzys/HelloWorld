@@ -10,7 +10,7 @@ struct Index {
     Column() {
       List( {space: 20}) {
         ListItem() {
-          Text('Hello World')
+          Button('Hello World')
             .fontWeight(FontWeight.Bold)
             .alignRules({
               center: { anchor: '__container__', align: VerticalAlign.Center },
@@ -22,14 +22,14 @@ struct Index {
         }
 
         ListItem() {
-          Text('应用程序包')
+          Button('应用程序包')
             .onClick( () => {
               router.pushUrl({url: "pages/Module/ModulePage"})
             })
         }
 
         ListItem() {
-          Text('天气')
+          Button('天气')
             .onClick(() => {
               router.pushUrl({url: "pages/weather/WeatherPage"})
             })
@@ -44,29 +44,49 @@ struct Index {
         }
 
         ListItem() {
-          Text('组件状态管理')
+          Button('组件状态管理')
             .onClick(() => {
               router.pushUrl({url: 'pages/stateManage/StateManagePage'})
             })
         }
 
         ListItem() {
-          Text('渲染控制')
+          Button('渲染控制')
             .onClick(() => {
               router.pushUrl({url: 'pages/rendering/RenderingPage'})
             })
         }
 
         ListItem() {
-          Text('网络请求')
+          Button('网络请求')
             .onClick(() => {
               router.pushUrl({url: 'pages/netWork/NetWorkPage'})
+            })
+        }
+
+        ListItem() {
+          Button('lottie动画')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/LottiePage'})
+            })
+        }
+
+        ListItem() {
+          Button('web和原生交互')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/WebPage'})
+            })
+        }
+
+        ListItem() {
+          Button('数据持久化')
+            .onClick(() => {
+              router.pushUrl({url: 'pages/DataPersistencePage'})
             })
         }
       }
       .width('100%')
       .height('100%')
-
 
     }
     .height('100%')
